@@ -27,6 +27,10 @@ Qui andrà l'uml dei casi d'uso
 TODO: aprire cassetto dall'app
 -->
 
+### **Use cases diagram**
+
+![use cases](https://raw.githubusercontent.com/piconepaolo/pilly/main/UML/UseCaseDiagram1.jpg?token=AI3QDBQZYOXC66AWGNVJDCC73CXZK)
+
 
 
 
