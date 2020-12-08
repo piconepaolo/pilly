@@ -1,12 +1,6 @@
 # progetto ingegneria del software - pilly
 
 ### **idea del progetto**
-    
-Il progetto consiste nello sviluppo di un sistema che ha l'obiettivo di monitorare e aiutare pazienti anziani che hanno bisogno di assumere quantità precise e in maniera regolare di farmaci.
-Il paziente e i suoi familiari, potranno interfacciarsi con il sistema tramite un'applicazione o anche tramite un sistema hardware in grado di informare gli utenti riguardo la quantità di medicinale rimasto e l'orario a cui prenderlo.
-Il medico interagisce con il sistema caricando su un database il ciclo di cura che dovrà eseguire il paziente.
-Abbiamo individuato in totale (per il momento) tre attori: il database, i familiari e il paziente.
-
 
 Il sistema consiste in un applicazione che ha l'obiettivo di monitorare e aiutare pazienti anziani che hanno bisogno di assumere quantità precise e in maniera regolare di farmaci.
 Il sistema dovrà notificare al paziente quando assumere i medicinali in base alla ricetta caricata sul server da parte del medico curante.
