@@ -31,6 +31,68 @@ TODO: aprire cassetto dall'app
 
 ![use cases](https://raw.githubusercontent.com/piconepaolo/pilly/main/UML/UseCaseDiagram1.jpg?token=AI3QDBQZYOXC66AWGNVJDCC73CXZK)
 
+### **Scenari**
+
+| Caso d'uso : Prendere medicine |
+| ------------ |
+| **Attori**: Paziente, Hardware, Server |
+| **Precondizioni** : 
+ 1. Il caso d'uso inizia quando l'orario è prossimo all'ora dell'assunzione del medicinale
 
 
+| Sequenza degli eventi : 
+ 1. Il paziente clicca il pulsante per aprire il cassetto e prendere la medicina|
+ 
 
+| Post condizioni |
+|-|
+| 
+1. L'assunzione è stata registrata sul server|
+|**Sequenza alternativa 1**|
+ 1. Il paziente non clicca il pulsante per prendere la medicina  
+
+
+| Post condizioni |
+|-|
+|
+1. La non assunzione è stata registrata sul server
+2. Il familiare viene notificato della non assunzione
+
+| Sequenza alternativa 2 |
+|-|
+| 
+1. La medicina non è presente
+2. clicca pulsante emergenza
+
+| Post condizioni|
+|-|
+|
+1. La non assunzione è stata registrata sul server
+2. Il familiare viene avvisato con una notifica di urgenza
+
+
+| Caso d'uso : Prenotazione medicinali |
+| ------------ |
+| **Attori**: Farmacia, Familiare, Hardware, Server |
+| **Precondizioni** : 
+ 1. Notifica di manutenzione da parte dell'app|
+|Sequenza degli eventi : 
+ 1. Il familiare apre il cassetto tramite app
+ 2. Conferma il rifornimento dei medicinali tramite app
+ 
+ | Post condizioni |
+ | --------------- |
+ |
+ 1. Aggiornamento inventario da parte del server
+
+ | Sequenza alternativa 1 |
+ |-|
+ |
+ 1. Clicca il pulsante sull'app per il rifornimento dei medicinali da parte della farmacia
+ 2. Il familiare apre il cassetto tramite app
+ 3. Conferma il rifornimento dei medicinali tramite app
+
+ | Post condizioni |
+ | --------------- |
+ |
+ 1. Aggiornamento inventario da parte del server
