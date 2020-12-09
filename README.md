@@ -31,7 +31,7 @@ TODO: aprire cassetto dall'app
 
 ## **Use cases diagram**
 
-![use cases](https://raw.githubusercontent.com/piconepaolo/pilly/main/UML/UseCaseDiagram1.jpg?token=AI3QDBQZYOXC66AWGNVJDCC73CXZK)
+![use cases](UML/UseCaseDiagram1.jpg)
 
 ## **Scenari**
 
@@ -57,6 +57,8 @@ TODO: aprire cassetto dall'app
 | **Post condizioni**  <ol><li>Aggiornamento inventario da parte del server</ol>|
 
 
+## **Diagramma delle classi**
 
+![DC](UML/ClassDiagram1.jpg)
 
  
