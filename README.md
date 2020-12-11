@@ -43,7 +43,7 @@ TODO: aprire cassetto dall'app
 | **Post condizioni** <ol><li> L'assunzione è stata registrata sul server</ol>|
 | **Sequenza alternativa 1** <ol><li>Il paziente non clicca il pulsante per prendere la medicina</ol>|
 | **Post condizioni**  <ol><li>La non assunzione è stata registrata sul server</li><li>Il familiare viene notificato della non assunzione</ol>|
-| **Sequenza alternativa 2** <ol><li>La medicina non è presente</li><li>clicca pulsante emergenza</ol>|
+| **Sequenza alternativa 2** <ol><li>La medicina non è presente</li><li>Clicca pulsante emergenza</ol>|
 | **Post condizioni** <ol><li>La non assunzione è stata registrata sul server</li><li>Il familiare viene avvisato con una notifica di urgenza</ol>|
 
 
@@ -55,6 +55,25 @@ TODO: aprire cassetto dall'app
 | **Post condizioni** <ol><li> Aggiornamento inventario da parte del server</ol>|
 | **Sequenza alternativa 1** <ol><li>Clicca il pulsante sull'app per il rifornimento dei medicinali da parte della farmacia</li><li>Il familiare apre il cassetto tramite app</li><li>Conferma il rifornimento dei medicinali tramite app</ol>|
 | **Post condizioni**  <ol><li>Aggiornamento inventario da parte del server</ol>|
+
+| Caso d'uso : Aggiunta di una ricetta medica | 
+| :----------- |
+|**Attori**: Medico, Server, Familiare,     |
+|**Precondizioni** <ol><li>Login nell'applicazione da parte del medico</ol> |
+|**Sequenza degli eventi** <ol><li>Il dottore crea la ricetta</li><li>Il server carica la ricetta</li><li>Il server fa un controllo sull'inventario</li><li>Se necessario il server aggiorna l'inventario</li></ol>|
+|**Post condizioni** <ol><li>Al familiare del paziente viene notificato il caricamento della ricetta</li><li>Il familiare decide se esportare la ricetta in pdf o mandarla via mail alla farmacia</li><li>Si passa al caso d'uso in cui viene effettuata la prenotazione dei medicinali</li></ol>|
+|**Sequenza alternativa 1** <ol><li>Il dottore crea la ricetta</li><li>Il server carica la ricetta</li><li>Il server fa un controllo sull'inventario</li><li>Se necessario il server aggiorna l'inventario</li><li>il familiare non vede la notifica della ricetta</li></ol>|
+|**Post condizioni** <ol><li>Al familiare viene ripetuta la notifica ogni 5 minuti finché non la visulizza</li><li>Il familiare decide se esportare la ricetta in pdf o mandarla via mail alla farmacia</li><li>Si passa al caso d'uso in cui viene effettuata la prenotazione dei medicinali</li></ol>|
+
+|Caso d'uso : |
+| :----------- |
+|** ** |
+|** ** |
+|** ** |
+|** ** |
+|** ** |
+|** ** |
+|** ** |
 
 
 ## **Diagramma delle classi**
