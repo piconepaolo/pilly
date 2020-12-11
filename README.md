@@ -61,4 +61,12 @@ TODO: aprire cassetto dall'app
 
 ![DC](UML/ClassDiagram1.jpg)
 
- 
+ <!---
+ Manca cio che ha detto il committente
+ scarno di informazioni
+ dettagliare meglio
+
+ ricetta/farmaco come classe e attributi
+
+ iniziare a fare sequenza 
+-->
