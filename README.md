@@ -84,7 +84,7 @@ TODO: aprire cassetto dall'app
 
 ### *Rifornimento medicinali*
 
-![sd rifornimento medicinale](UML/rifornimentomedicinali.jpg)
+![sd rifornimento medicinale](UML/Rifornimentomedicinali.jpg)
 
 ## **ER Diagram**
 
