@@ -1,6 +1,6 @@
 # Progetto ingegneria del software - pilly
 
-## **Idea del progetto**
+## **Requisiti Informali**
 
 Il sistema consiste in un applicazione che ha l'obiettivo di monitorare e aiutare pazienti anziani che hanno bisogno di assumere quantità precise e in maniera regolare di farmaci.
 Il sistema dovrà notificare al paziente quando assumere i medicinali in base alla ricetta caricata sul server da parte del medico curante.
@@ -8,26 +8,37 @@ La notifica avviene tramite un sistema hardware composto da led, display e vani 
 L'applicazione interagisce con un server che hai il compito di memorizzare la quantità e la frequenza riguardo le assunzioni dei medicinali.
 Il sistema può interagire con una farmacia con lo scopo di prenotare i medicinali per il rifornimento.
 
-<!---
-Tabella per descrivere i requisiti funzionali, descrizione non troppo dettagliata
--->
+Nello specifico, il sistema verrà usato da 4 tipologie di utenti. Ad ognuna di queste tipologie di utenti sono associate delle specifiche funzioni:
 
-<!---### **Specifica dei requisiti**
+* Il **Medico**, dovrà essere in grado di accedere al database e di ricercare i pazienti in modo da associare ad essi una specifica ricetta. La ricetta può essere importata attraverso una foto o tramite un form da lui personalizzabile.
 
-| requisiti funzionali | Descrizione |
-| ---------------------| ----------- |
-| esempio | prova |
-| a | b |
+* Il **Familiare**, dovrà essere in grado di controllare il dispositivo **Hardware** per un eventuale rifornimento di medicinali, visualizzare lo storico delle assunzione da parte del **Paziente** e controllare il quantitativo di medicinali rimanenti nell'apposito cassetto dell'**Hardware**.
 
--->
+* Il **Paziente**, viene notificato dal sistema **Hardware** ad ogni occorrenza dell'assunzione. Dopo l'assunzione il **Paziente** potrà notificare l'assunzione del medicinale tramite la chiusura del cassetto, attraverso un pulsante incluso nel sistema **Hardware**
 
-<!---
-Qui andrà l'uml dei casi d'uso
--->
+* Il **Tecnico**, si occuperà della manutenzione non ordinaria dell'**Hardware**, come il blocco del sistema oppure un guasto. 
 
-<!---
-TODO: aprire cassetto dall'app
--->
+
+## **Specifica dei requisiti funzionali**
+
+<!--* **Medico**
+    * crea la ricetta tramite app
+    * aggiorna una ricetta esistente
+* **Familiare**
+    * Viene notificato del rifornimento dei medicinali dal sistema, inoltre una volta notificato può prenotare i medicinali presso una farmacia comunicando tramite l'applicazione la ricetta del paziente che ha bisogno del rifornimento.
+* **Paziente**
+    * 
+* **Farmacia**
+    * 
+* **Tecnico**
+    * 
+* **Server**
+    * 
+* **Hardware**
+    * 
+--->
+## **Specifica dei requisiti non funzionali**
+
 
 ## **Use cases diagram**
 
@@ -90,3 +101,6 @@ TODO: aprire cassetto dall'app
 
 ![erd](UML/ERDDiagram1.jpg)
 
+## **Test di livello zero**
+
+## **Diagramma delle classi di secondo livello**
