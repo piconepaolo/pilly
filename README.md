@@ -48,7 +48,7 @@ Nello specifico, il sistema verrà usato da 4 tipologie di utenti. Ad ognuna di 
 
 | Caso d'uso : Prendere medicine |
 | :----------------------------- |
-| **Attori**: Paziente, Hardware, Server |
+| **Attori**: Paziente, Hardware |
 | **Precondizioni**  <ol><li>Il caso d'uso inizia quando l'orario è prossimo all'ora dell'assunzione del medicinale</ol>|
 | **Sequenza degli eventi** <ol><li>Il paziente clicca il pulsante per aprire il cassetto e prendere la medicina</ol>|
 | **Post condizioni** <ol><li> L'assunzione è stata registrata sul server</ol>|
@@ -60,7 +60,7 @@ Nello specifico, il sistema verrà usato da 4 tipologie di utenti. Ad ognuna di 
 
 | Caso d'uso : Rifornimento medicinali |
 | :----------- |
-| **Attori**: Farmacia, Familiare, Hardware, Server  |
+| **Attori**: Farmacia, Familiare, Hardware |
 | **Precondizioni**  <ol><li>Notifica di manutenzione da parte dell'app</ol>|
 | **Sequenza degli eventi** <ol><li>Il familiare apre il cassetto tramite app</li><li>Conferma il rifornimento dei medicinali tramite app</ol>|
 | **Post condizioni** <ol><li> Aggiornamento inventario da parte del server</ol>|
@@ -69,7 +69,7 @@ Nello specifico, il sistema verrà usato da 4 tipologie di utenti. Ad ognuna di 
 
 | Caso d'uso : Aggiunta di una ricetta medica | 
 | :----------- |
-|**Attori**: Medico, Server, Familiare,     |
+|**Attori**: Medico, Familiare |
 |**Precondizioni** <ol><li>Login nell'applicazione da parte del medico</ol> |
 |**Sequenza degli eventi** <ol><li>Il dottore crea la ricetta</li><li>Il server carica la ricetta</li><li>Il server fa un controllo sull'inventario</li><li>Se necessario il server aggiorna l'inventario</li></ol>|
 |**Post condizioni** <ol><li>Al familiare del paziente viene notificato il caricamento della ricetta</li><li>Il familiare decide se esportare la ricetta in pdf o mandarla via mail alla farmacia</li><li>Si passa al caso d'uso in cui viene effettuata la prenotazione dei medicinali</li></ol>|
