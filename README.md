@@ -37,8 +37,25 @@ Nello specifico, il sistema verrà usato da 4 tipologie di utenti. Ad ognuna di 
 * **Hardware**
     * 
 --->
+
+<!-- DOMANDA SU RECOVERY??????? --->
+
 ## **Specifica dei requisiti non funzionali**
 
+Elenco dei requisiti non funzionali
+
+* **Usabilità** : L'hardware dovrà essere dotato di dispositivi che rendono chiaro il medicinale da assumere cercando di garantire il minimo sforzo da parte dell'anziano. L'interfaccia utente dovrà essere il più possibile user-friendly per garantire un'esperienza fluida da parte dell'utente.    
+* **Recovery** : Nel caso l'Hardware non abbia più accesso alla rete deve continuare a notificare l'anziano utilizzando i registri scaricati dall'ultimo update. 
+* **Sicurezza** : Il sistema memorizzando dati sensibili quali le ricette prescritte dal medico piuttosto che le patologie del paziente, o le più comuni password, deve garantire un determinato livello di sicurezza per preservarli.
+Quindi i dati di ogni singolo utente non devono essere salvati in chiaro ma dovranno essere cifrati attraverso un Secure Hash Algorithm, in particolare lo SHA-256.
+<!--* **Affidabilità**--->
+
+
+*HTTP Server*: **nginx 1.10.3** <br>
+*DBMS*: **PostgreSQL 10.15** <br> *Linguaggio lato server*: **PHP 5.6.0** <br>
+*Sistema operativo server*: **GNU/Linux Debian 10.7.0** <br>
+*Sistema operativo lato client*: **Android 7.0 o maggiore** / **iOS 10 o maggiore** <br>
+*Piattaforma hardware*: **Architettura ARM 32bit**
 
 ## **Use cases diagram**
 
@@ -75,6 +92,10 @@ Nello specifico, il sistema verrà usato da 4 tipologie di utenti. Ad ognuna di 
 |**Post condizioni** <ol><li>Al familiare del paziente viene notificato il caricamento della ricetta</li><li>Il familiare decide se esportare la ricetta in pdf o mandarla via mail alla farmacia</li><li>Si passa al caso d'uso in cui viene effettuata la prenotazione dei medicinali</li></ol>|
 |**Sequenza alternativa 1** <ol><li>Il dottore crea la ricetta</li><li>Il sistema carica la ricetta</li><li>Il sistema fa un controllo sull'inventario</li><li>Se necessario il sistema aggiorna l'inventario</li><li>il familiare non vede la notifica della ricetta</li></ol>|
 |**Post condizioni** <ol><li>Al familiare viene ripetuta la notifica ogni 5 minuti finché non la visulizza</li><li>Il familiare decide se esportare la ricetta in pdf o mandarla via mail alla farmacia</li><li>Si passa al caso d'uso in cui viene effettuata la prenotazione dei medicinali</li></ol>|
+
+## **Test di livello zero**
+
+
 
 ## **Diagramma delle classi**
 
