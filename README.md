@@ -126,6 +126,10 @@ Quindi i dati di ogni singolo utente non devono essere salvati in chiaro ma dovr
 
 ![erd](UML/ERDDiagram1.jpg)
 
+## **Component Diagram**
+
+![compd](UML/ComponentDiagram1.jpg)
+
 ## **Test di livello zero**
 
 ## **Diagramma delle classi di secondo livello**
