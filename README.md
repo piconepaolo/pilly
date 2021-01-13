@@ -109,27 +109,27 @@ Quindi i dati di ogni singolo utente non devono essere salvati in chiaro ma dovr
 | Test : Rifornimento medicinali  | 
 | :----------- |
 | Il familiare ricarica l'inventario con tutti i medicinali mancanti |
-| Al server viene notificato il corretto rifornimento dei medicinali ed al familiare arriva una notifica di conferma |
+| Risultato atteso : Al server viene notificato il corretto rifornimento dei medicinali ed al familiare arriva una notifica di conferma |
 
 | Test : Rifornimento parziale dei medicinali | 
 | :----------- |
 | Il familiare dimentica qualche medicinale nella ricarica dell'inventario |
-| Al server viene comunicata l'errato rifornimento e l'utente verrá notificato tramite applicazione |
+| Risultato atteso : Al server viene comunicata l'errato rifornimento e l'utente verrá notificato tramite applicazione |
 
 | Test : Rifornimento errato di medicinali | 
 | :----------- |
 | Il familiare ricarica l'inventario con il medicinale sbagliato |
-| L'hardware non apre i cassetti e l'utente verrá notificato tramite applicazione|
+| Risultato atteso : L'hardware non apre i cassetti e l'utente verrá notificato tramite applicazione|
 
 | Test : Manutenzione dell'hardware | 
 | :----------- |
 | L'hardware notifica una manutenzione |
-| Uno dei tecnici disponibili viene notificato della necessaria manutenzione|
+| Risultato atteso : Uno dei tecnici disponibili viene notificato della necessaria manutenzione|
 
 | Test : Medicinali mancanti da parte della farmacia per un rifornimento | 
 | :----------- |
 | Il familiare ha bisogno di medicinali che mancano alla farmacia che ha come preferita |
-| Viene mostrato un elenco delle farmacie più vicine che hanno disponibile quel medicinale |
+| Risultato atteso : Viene mostrato un elenco delle farmacie più vicine che hanno disponibile quel medicinale |
 
 
 ## **Diagramma delle classi**
