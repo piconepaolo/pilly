@@ -121,6 +121,15 @@ Quindi i dati di ogni singolo utente non devono essere salvati in chiaro ma dovr
 | Il familiare ricarica l'inventario con il medicinale sbagliato |
 | L'hardware non apre i cassetti e l'utente verrá notificato tramite applicazione|
 
+| Test : Manutenzione dell'hardware | 
+| :----------- |
+| L'hardware notifica una manutenzione |
+| Uno dei tecnici disponibili viene notificato della necessaria manutenzione|
+
+| Test : Medicinali mancanti da parte della farmacia per un rifornimento | 
+| :----------- |
+| Il familiare ha bisogno di medicinali che mancano alla farmacia che ha come preferita |
+| Viene mostrato un elenco delle farmacie più vicine che hanno disponibile quel medicinale |
 
 
 ## **Diagramma delle classi**
