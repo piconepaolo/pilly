@@ -94,6 +94,32 @@ Quindi i dati di ogni singolo utente non devono essere salvati in chiaro ma dovr
 |**Post condizioni** <ol><li>Al familiare viene ripetuta la notifica ogni 5 minuti finché non la visulizza</li><li>Il familiare decide se esportare la ricetta in pdf o mandarla via mail alla farmacia</li><li>Si passa al caso d'uso in cui viene effettuata la prenotazione dei medicinali</li></ol>|
 
 ## **Test di livello zero**
+### *I Test di livello zero vengono effettuati sul prodotto finale per verificarne la corretta funzionalità e la corrispondenza di quanto richiesto dal committente. Tali test coincidono, generalmente, con i casi d'uso e quindi generalmete chi effettua questi test non ha bisogno di conoscere il codice che c'è dietro.* 
+
+| Test : Creazione/Aggiornamento di una ricetta | 
+| :----------- |
+| Il medico crea/aggiorna una ricetta |
+| Risultato atteso : La nuova ricetta viene caricata correttamente sul server |
+
+| Test : Assunzione dei medicinali non completa | 
+| :----------- |
+| Il paziente non assume tutti/o parte dei medicinali|
+| Risultato atteso : Al familiare viene notificata la mancata assunzione del paziente. L'assunzione dei medicinali non verrà registrate finché non saranno assunti tutti i medicinali |
+
+| Test : Rifornimento medicinali  | 
+| :----------- |
+| Il familiare ricarica l'inventario con tutti i medicinali mancanti |
+| Al server viene notificato il corretto rifornimento dei medicinali ed al familiare arriva una notifica di conferma |
+
+| Test : Rifornimento parziale dei medicinali | 
+| :----------- |
+| Il familiare dimentica qualche medicinale nella ricarica dell'inventario |
+| Al server viene comunicata l'errato rifornimento e l'utente verrá notificato tramite applicazione |
+
+| Test : Rifornimento errato di medicinali | 
+| :----------- |
+| Il familiare ricarica l'inventario con il medicinale sbagliato |
+| L'hardware non apre i cassetti e l'utente verrá notificato tramite applicazione|
 
 
 
@@ -130,6 +156,9 @@ Quindi i dati di ogni singolo utente non devono essere salvati in chiaro ma dovr
 
 ![compd](UML/ComponentDiagram1.jpg)
 
-## **Test di livello zero**
+### *I Test di livello zero vengono effettuati sul prodotto finale per verificarne la corretta funzionalità e la corrispondenza di quanto richiesto dal committente. Tali test coincidono, generalmente, con i casi d'uso e quindi generalmete chi effettua questi test non ha bisogno di conoscere il codice che c'è dietro.*
+| Test : Creazione di una ricetta| 
+ 
+
 
 ## **Diagramma delle classi di secondo livello**
