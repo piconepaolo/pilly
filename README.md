@@ -165,9 +165,4 @@ Quindi i dati di ogni singolo utente non devono essere salvati in chiaro ma dovr
 
 ![compd](UML/ComponentDiagram1.jpg)
 
-### *I Test di livello zero vengono effettuati sul prodotto finale per verificarne la corretta funzionalità e la corrispondenza di quanto richiesto dal committente. Tali test coincidono, generalmente, con i casi d'uso e quindi generalmete chi effettua questi test non ha bisogno di conoscere il codice che c'è dietro.*
-| Test : Creazione di una ricetta| 
- 
-
-
 ## **Diagramma delle classi di secondo livello**
