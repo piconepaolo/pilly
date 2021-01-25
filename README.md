@@ -21,24 +21,23 @@ Nello specifico, il sistema verrà usato da 4 tipologie di utenti. Ad ognuna di 
 
 ## **Specifica dei requisiti funzionali**
 
-<!--* **Medico**
-    * crea la ricetta tramite app
-    * aggiorna una ricetta esistente
+* **Medico**
+    * Crea la ricetta tramite app
+    * Aggiorna una ricetta esistente
 * **Familiare**
     * Viene notificato del rifornimento dei medicinali dal sistema, inoltre una volta notificato può prenotare i medicinali presso una farmacia comunicando tramite l'applicazione la ricetta del paziente che ha bisogno del rifornimento.
 * **Paziente**
-    * 
+    * Il paziente notifica l'assunzione aprendo e chiudendo i cassetti.
 * **Farmacia**
-    * 
+    * Riceve le prenotazioni dei medicinali
 * **Tecnico**
-    * 
-* **sistema**
-    * 
+    * Esegue la manutenzione notificata dal sistema
 * **Hardware**
-    * 
---->
+    * Notifica orario assunzione
+    * Gestisce l'apertura e la chiusura dei cassetti
+    * Notifica le manutenzioni
+    * Notifica gli eventuali rifornimenti
 
-<!-- DOMANDA SU RECOVERY??????? --->
 
 ## **Specifica dei requisiti non funzionali**
 
@@ -48,8 +47,6 @@ Elenco dei requisiti non funzionali
 * **Recovery** : Nel caso l'Hardware non abbia più accesso alla rete deve continuare a notificare l'anziano utilizzando i registri scaricati dall'ultimo update. 
 * **Sicurezza** : Il sistema memorizzando dati sensibili quali le ricette prescritte dal medico piuttosto che le patologie del paziente, o le più comuni password, deve garantire un determinato livello di sicurezza per preservarli.
 Quindi i dati di ogni singolo utente non devono essere salvati in chiaro ma dovranno essere cifrati attraverso un Secure Hash Algorithm, in particolare lo SHA-256.
-<!--* **Affidabilità**--->
-
 
 *HTTP Server*: **nginx 1.10.3** <br>
 *DBMS*: **PostgreSQL 10.15** <br> *Linguaggio lato server*: **PHP 5.6.0** <br>
@@ -94,7 +91,7 @@ Quindi i dati di ogni singolo utente non devono essere salvati in chiaro ma dovr
 |**Post condizioni** <ol><li>Al familiare viene ripetuta la notifica ogni 5 minuti finché non la visulizza</li><li>Il familiare decide se esportare la ricetta in pdf o mandarla via mail alla farmacia</li><li>Si passa al caso d'uso in cui viene effettuata la prenotazione dei medicinali</li></ol>|
 
 ## **Test di livello zero**
-### *I Test di livello zero vengono effettuati sul prodotto finale per verificarne la corretta funzionalità e la corrispondenza di quanto richiesto dal committente. Tali test coincidono, generalmente, con i casi d'uso e quindi generalmete chi effettua questi test non ha bisogno di conoscere il codice che c'è dietro.* 
+#### I Test di livello zero vengono effettuati sul prodotto finale per verificarne la corretta funzionalità e la corrispondenza di quanto richiesto dal committente. Tali test coincidono, generalmente, con i casi d'uso e quindi generalmete chi effettua questi test non ha bisogno di conoscere il codice che c'è dietro. 
 
 | Test : Creazione/Aggiornamento di una ricetta | 
 | :----------- |
@@ -166,3 +163,5 @@ Quindi i dati di ogni singolo utente non devono essere salvati in chiaro ma dovr
 ![compd](UML/ComponentDiagram1.jpg)
 
 ## **Diagramma delle classi di secondo livello**
+
+![CD2](UML/ClassDiagram2.jpg)
