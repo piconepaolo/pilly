@@ -133,26 +133,11 @@ Quindi i dati di ogni singolo utente non devono essere salvati in chiaro ma dovr
 
 ![DC](UML/ClassDiagram1.jpg)
 
- <!---
- Manca cio che ha detto il committente
- scarno di informazioni
- dettagliare meglio
-
- ricetta/farmaco come classe e attributi
-
- iniziare a fare sequenza 
--->
-
-
 ## **Sequence diagrams**
 
 ### *Rifornimento medicinali*
 
 ![sd rifornimento medicinale](UML/Rifornimentomedicinali.jpg)
-
-### *Crea ricetta*
-
-![sd crea ricetta](UML/crearicetta.jpg)
 
 ## **ER Diagram**
 
