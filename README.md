@@ -4,7 +4,7 @@
 
 Il sistema consiste in un applicazione che ha l'obiettivo di monitorare e aiutare pazienti anziani che hanno bisogno di assumere quantità precise e in maniera regolare di farmaci.
 Il sistema dovrà notificare al paziente quando assumere i medicinali in base alla ricetta caricata sul server da parte del medico curante.
-La notifica avviene tramite un sistema hardware composto da led, display e vani contenenti medicinali che si apriranno automaticamente, o manualmente dal paziente oppure da un qualsiasi utente, tramite applicazione.
+La notifica avviene tramite un sistema hardware composto da led, display, buzzers e vani contenenti medicinali che si apriranno automaticamente, o manualmente dal paziente oppure da un qualsiasi utente, tramite applicazione.
 L'applicazione interagisce con un server che hai il compito di memorizzare la quantità e la frequenza riguardo le assunzioni dei medicinali.
 Il sistema può interagire con una farmacia con lo scopo di prenotare i medicinali per il rifornimento.
 
@@ -12,7 +12,7 @@ Nello specifico, il sistema verrà usato da 4 tipologie di utenti. Ad ognuna di 
 
 * Il **Medico**, dovrà essere in grado di accedere al database e di ricercare i pazienti in modo da associare ad essi una specifica ricetta. La ricetta può essere importata attraverso una foto o tramite un form da lui personalizzabile.
 
-* Il **Familiare**, dovrà essere in grado di controllare il dispositivo **Hardware** per un eventuale rifornimento di medicinali, visualizzare lo storico delle assunzione da parte del **Paziente** e controllare il quantitativo di medicinali rimanenti nell'apposito cassetto dell'**Hardware**.
+* Il **Familiare**, dovrà essere in grado di controllare il dispositivo **Hardware** per un eventuale rifornimento di medicinali, e nel caso prenotare i medicinali necessari da una farmacia, visualizzare lo storico delle assunzioni da parte del **Paziente** e controllare il quantitativo di medicinali rimanenti nell'apposito cassetto dell'**Hardware**.
 
 * Il **Paziente**, viene notificato dal sistema **Hardware** ad ogni occorrenza dell'assunzione. Dopo l'assunzione il **Paziente** potrà notificare l'assunzione del medicinale tramite la chiusura del cassetto, attraverso un pulsante incluso nel sistema **Hardware**
 
@@ -25,15 +25,17 @@ Nello specifico, il sistema verrà usato da 4 tipologie di utenti. Ad ognuna di 
     * Crea la ricetta tramite app
     * Aggiorna una ricetta esistente
 * **Familiare**
-    * Viene notificato del rifornimento dei medicinali dal sistema, inoltre una volta notificato può prenotare i medicinali presso una farmacia comunicando tramite l'applicazione la ricetta del paziente che ha bisogno del rifornimento.
+    * Viene notificato del rifornimento dei medicinali dal sistema.
+    * Può prenotare i medicinali presso una farmacia
 * **Paziente**
-    * Il paziente notifica l'assunzione aprendo e chiudendo i cassetti.
+    * Il paziente viene notificato dall' **Hardware** tramite suoni e luci.
+    * Il paziente notifica l'assunzione chiudendo i cassetti.
 * **Farmacia**
     * Riceve le prenotazioni dei medicinali
 * **Tecnico**
-    * Esegue la manutenzione notificata dal sistema
+    * Esegue la manutenzione, dell'**Hardware**, notificata dal sistema.
 * **Hardware**
-    * Notifica orario assunzione
+    * Notifica orario assunzione, tramite suoni e luci.
     * Gestisce l'apertura e la chiusura dei cassetti
     * Notifica le manutenzioni
     * Notifica gli eventuali rifornimenti
@@ -64,11 +66,11 @@ Quindi i dati di ogni singolo utente non devono essere salvati in chiaro ma dovr
 | :----------------------------- |
 | **Attori**: Paziente, Hardware |
 | **Precondizioni**  <ol><li>Il caso d'uso inizia quando l'orario è prossimo all'ora dell'assunzione del medicinale</ol>|
-| **Sequenza degli eventi** <ol><li>Il paziente clicca il pulsante per aprire il cassetto e prendere la medicina</ol>|
+| **Sequenza degli eventi** <ol><li>Il paziente viene notificato dall'hardware</li><li>L'Hardware apre automaticamente il cassetto</li><li>Il paziente clicca il pulsante per la chiusura e notifica l'assunzione<li>L'Hardware chiude il cassetto</ol>|
 | **Post condizioni** <ol><li> L'assunzione è stata registrata sul sistema</ol>|
-| **Sequenza alternativa 1** <ol><li>Il paziente non clicca il pulsante per prendere la medicina</ol>|
+| **Sequenza alternativa 1** <ol><li>Il paziente viene notificato dall'hardware<li>L'Hardware apre automaticamente il cassetto</li><li>Il paziente non clicca il pulsante per chiudere il cassetto e non notifica l'assunzione</ol>|
 | **Post condizioni**  <ol><li>La non assunzione è stata registrata sul sistema</li><li>Il familiare viene notificato della non assunzione</ol>|
-| **Sequenza alternativa 2** <ol><li>La medicina non è presente</li><li>Clicca pulsante emergenza</ol>|
+| **Sequenza alternativa 2** <ol><li>La medicina non è presente</li></ol>|
 | **Post condizioni** <ol><li>La non assunzione è stata registrata sul sistema</li><li>Il familiare viene avvisato con una notifica di urgenza</ol>|
 
 
@@ -89,6 +91,10 @@ Quindi i dati di ogni singolo utente non devono essere salvati in chiaro ma dovr
 |**Post condizioni** <ol><li>Al familiare del paziente viene notificato il caricamento della ricetta</li><li>Il familiare decide se esportare la ricetta in pdf o mandarla via mail alla farmacia</li><li>Si passa al caso d'uso in cui viene effettuata la prenotazione dei medicinali</li></ol>|
 |**Sequenza alternativa 1** <ol><li>Il dottore crea la ricetta</li><li>Il sistema carica la ricetta</li><li>Il sistema fa un controllo sull'inventario</li><li>Se necessario il sistema aggiorna l'inventario</li><li>il familiare non vede la notifica della ricetta</li></ol>|
 |**Post condizioni** <ol><li>Al familiare viene ripetuta la notifica ogni 5 minuti finché non la visulizza</li><li>Il familiare decide se esportare la ricetta in pdf o mandarla via mail alla farmacia</li><li>Si passa al caso d'uso in cui viene effettuata la prenotazione dei medicinali</li></ol>|
+
+## **Diagramma delle classi**
+
+![DC](UML/ClassDiagram1.jpg)
 
 ## **Test di livello zero**
 #### I Test di livello zero vengono effettuati sul prodotto finale per verificarne la corretta funzionalità e la corrispondenza di quanto richiesto dal committente. Tali test coincidono, generalmente, con i casi d'uso e quindi generalmete chi effettua questi test non ha bisogno di conoscere il codice che c'è dietro. 
@@ -128,16 +134,15 @@ Quindi i dati di ogni singolo utente non devono essere salvati in chiaro ma dovr
 | Il familiare ha bisogno di medicinali che mancano alla farmacia che ha come preferita |
 | Risultato atteso : Viene mostrato un elenco delle farmacie più vicine che hanno disponibile quel medicinale |
 
-
-## **Diagramma delle classi**
-
-![DC](UML/ClassDiagram1.jpg)
-
-## **Sequence diagrams**
+## **Sequence diagram**
 
 ### *Rifornimento medicinali*
 
 ![sd rifornimento medicinale](UML/Rifornimentomedicinali.jpg)
+
+## **Diagramma delle classi di secondo livello**
+
+![CD2](UML/ClassDiagram2.jpg)
 
 ## **ER Diagram**
 
@@ -147,6 +152,3 @@ Quindi i dati di ogni singolo utente non devono essere salvati in chiaro ma dovr
 
 ![compd](UML/ComponentDiagram1.jpg)
 
-## **Diagramma delle classi di secondo livello**
-
-![CD2](UML/ClassDiagram2.jpg)
